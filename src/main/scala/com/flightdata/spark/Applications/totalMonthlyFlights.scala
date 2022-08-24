@@ -6,13 +6,24 @@ import org.apache.spark.sql.DataFrame
 
 object totalMonthlyFlights {
 
+  /**
+   * The total number of flights for each month.
+   * @param ds
+   * @param spark
+   * @return
+   */
   def result(ds: Dataset[Flight])(implicit spark: SparkSession): DataFrame = {
-
     ds.createOrReplaceTempView("FlightData")
-
-    val totalMonthlyFlightsQuery = "select count(*), MONTH (date) as month from flightData group by month"
+    val totalMonthlyFlightsQuery =
+      """
+        SELECT
+            MONTH (date) as Month,
+            COUNT(*) as Number_of_Flights
+        FROM flightData
+        GROUP BY Month
+        ORDER BY Month
+        """
     spark.sql(totalMonthlyFlightsQuery)
-
   }
 
 }
