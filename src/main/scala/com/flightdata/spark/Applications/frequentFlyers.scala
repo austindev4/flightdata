@@ -13,7 +13,7 @@ object frequentFlyers {
    * @param spark
    * @return
    */
-  def result(ds1: Dataset[Flight], ds2: Dataset[Passenger])(implicit spark: SparkSession): DataFrame = {
+  def result(spark: SparkSession, ds1: Dataset[Flight], ds2: Dataset[Passenger]): DataFrame = {
 
     ds1.createOrReplaceTempView("FlightData")
     ds2.createOrReplaceTempView("Passengers")

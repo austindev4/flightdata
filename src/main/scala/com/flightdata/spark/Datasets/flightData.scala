@@ -1,8 +1,8 @@
 package com.flightdata.spark.Datasets
 
 case class Flight(
-                       passengerId:Int,
-                       flightId:Int,
+                       passengerId: Int,
+                       flightId: Int,
                        from:String,
                        to:String,
                        date:String

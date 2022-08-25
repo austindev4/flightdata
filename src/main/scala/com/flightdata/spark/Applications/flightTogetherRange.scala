@@ -15,7 +15,7 @@ object flightTogetherRange {
    * @param spark
    * @return
    */
-  def result(ds1: Dataset[Flight], ds2: Dataset[Passenger], atLeastNTimes: Int = 3, from: String = "1900-01-02 00:00:00", to: String = "2099-01-02 00:00:00")(implicit spark: SparkSession): DataFrame = {
+  def result(spark: SparkSession, ds1: Dataset[Flight], ds2: Dataset[Passenger], atLeastNTimes: Int = 3, from: String = "1900-01-02 00:00:00", to: String = "2099-01-02 00:00:00"): DataFrame = {
 
     ds1.createOrReplaceTempView("FlightData")
     ds2.createOrReplaceTempView("Passengers")

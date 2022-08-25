@@ -9,7 +9,7 @@ import org.apache.spark.sql._
 object flightDataLoader {
 
   // Load flightData.csv into a Dataset
-  def flightds()(implicit spark: SparkSession): Dataset[Flight] = {
+  def flightds(spark: SparkSession): Dataset[Flight] = {
     import spark.implicits._
 
     logger.info(s":::: Spark Session State :: " + spark.sessionState + ": :::")
@@ -23,7 +23,7 @@ object flightDataLoader {
   }
 
   // Load passengers.csv into a dataset
-  def passengersds()(implicit spark: SparkSession): Dataset[Passenger] = {
+  def passengersds(spark: SparkSession): Dataset[Passenger] = {
     import spark.implicits._
 
     logger.info(s":::: Spark Session State :: " + spark.sessionState + ": :::")

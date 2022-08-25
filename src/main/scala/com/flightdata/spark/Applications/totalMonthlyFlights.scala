@@ -12,7 +12,7 @@ object totalMonthlyFlights {
    * @param spark
    * @return
    */
-  def result(ds: Dataset[Flight])(implicit spark: SparkSession): DataFrame = {
+  def result(spark: SparkSession, ds: Dataset[Flight]): DataFrame = {
     ds.createOrReplaceTempView("FlightData")
     val totalMonthlyFlightsQuery =
       """
