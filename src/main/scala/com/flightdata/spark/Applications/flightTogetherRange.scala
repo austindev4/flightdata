@@ -21,6 +21,7 @@ object flightTogetherRange {
     ds2.createOrReplaceTempView("Passengers")
 
     /**
+     * Document SQL logic
      * Inner join on flightData table on Flight ID, Date and
      * Passenger ID where Passenger ID is not equal.
      * Group by Passenger 1 & 2 ID's and filter the result

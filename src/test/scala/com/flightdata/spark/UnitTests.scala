@@ -11,7 +11,7 @@ class UnitTests extends NewTestSparkSession
   with FunSpecLike{
 
   it("Data loader should work") {
-    flightDataLoader.flightds(spark) shouldBe a [Dataset[Flight]]
+    flightDataLoader.flightds(spark) shouldBe a [Dataset[_]]
   }
 
   it("Both datasource's should exist"){

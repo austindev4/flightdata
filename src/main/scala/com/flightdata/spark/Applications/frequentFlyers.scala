@@ -19,6 +19,7 @@ object frequentFlyers {
     ds2.createOrReplaceTempView("Passengers")
 
        /**
+        * Document SQL Logic
         -- SET UP CTE
         -- - select top 100 Passenger_ID and its count as Number_of_Flights
         -- - group by Passenger_ID and order by Number_of_Flights

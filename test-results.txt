@@ -1,0 +1,25 @@
+[info] welcome to sbt 1.7.1 (Oracle Corporation Java 1.8.0_333)
+[info] loading settings for project flightdata-build from assembly.sbt ...
+[info] loading project definition from C:\sbt\flightdata\project
+[info] loading settings for project flightdata from build.sbt ...
+[info] set current project to FlightData (in build file:/C:/sbt/flightdata/)
+[info] UnitTests:
+[info] - Data loader should work
+[info] - Both datasource's should exist
+[info] FunctionalTests:
+[info] - Output row count of : total monthly flights analysis : is valid
+[info] - Output schema of : total monthly flights : is valid
+[info] - Output of : top 100 frequent flyers : is valid
+[info] - Output of : passengers together on 3 flights : is valid
+[info] - Output of : passengers together on N flights in date range : is valid
+[info] DataQualityTests:
+[info] - Location codes in 'to' columns are valid
+[info] - Location codes in 'from' columns are valid
+[info] - Input schema for flightData source is valid
+[info] - Input schema for passengerData source is valid
+[info] Run completed in 30 seconds, 460 milliseconds.
+[info] Total number of tests run: 11
+[info] Suites: completed 3, aborted 0
+[info] Tests: succeeded 11, failed 0, canceled 0, ignored 0, pending 0
+[info] All tests passed.
+[success] Total time: 37 s, completed 25/08/2022 1:05:08 PM
